@@ -1,0 +1,5 @@
+FROM openjdk:8
+ADD target/registration-service.jar registration-service.jar
+EXPOSE 1111
+#We need to tell the command with which the docker container needs to run our application
+ENTRYPOINT ["java", "-jar", "registration-service.jar"]

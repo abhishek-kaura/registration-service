@@ -40,7 +40,7 @@ public class RegistrationController extends BaseController {
 	@CrossOrigin
 	public ResponseEntity<String> sayWelcomeMessageToRegistrationAPI() {
 
-		return new ResponseEntity<String>("Welcome to Metrics Mart REST API", getHeaders(), HttpStatus.OK);
+		return new ResponseEntity<String>("Welcome to Registration API", getHeaders(), HttpStatus.OK);
 
 	}
 	
