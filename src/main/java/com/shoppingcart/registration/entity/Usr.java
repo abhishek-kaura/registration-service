@@ -28,7 +28,7 @@ public class Usr implements Serializable  {
 	@Column(name= "USR_NM")
 	private String userName;
 	
-	@Column(name="FST_NM")
+	@Column(name="FRST_NM")
 	private String firstName;
 	
 	@Column(name="MDL_NM")
