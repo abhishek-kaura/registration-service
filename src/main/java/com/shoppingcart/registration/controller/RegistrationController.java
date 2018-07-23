@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.shoppingcart.registration.exception.RegisterBusinessError;
 import com.shoppingcart.registration.exception.RegisterServiceException;
@@ -47,7 +48,7 @@ public class RegistrationController extends BaseController {
 	@ApiOperation(value="Register User",notes="This method will be used to register the user")
 	@PostMapping(value="/registerUser")
 	@CrossOrigin
-	public ResponseEntity<BaseResponse> registerUser(RegisterUserRequest registerUserRequest) throws RegisterServiceException{
+	public ResponseEntity<BaseResponse> registerUser(@RequestBody RegisterUserRequest registerUserRequest) throws RegisterServiceException{
 		
 		logger.info(RegistrationController.class.getName(),"Enter --> registerUser()");
 		
