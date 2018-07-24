@@ -28,11 +28,11 @@ public class RegistrationServiceHelper {
 			usr = new Usr();
 
 			usr.setUserName(StringUtils.trim(registerUserRequest.getUserName()));
-			usr.setFirstName(StringUtils.trim(registerUserRequest.getFirstName()));
-			usr.setMiddleName(StringUtils.trim(registerUserRequest.getMiddleName()));
-			usr.setLastName(StringUtils.trim(registerUserRequest.getLastName()));
+			usr.setFirstName(StringUtils.upperCase(StringUtils.trim(registerUserRequest.getFirstName())));
+			usr.setMiddleName(StringUtils.upperCase(StringUtils.trim(registerUserRequest.getMiddleName())));
+			usr.setLastName(StringUtils.upperCase(StringUtils.trim(registerUserRequest.getLastName())));
 			usr.setEmail(StringUtils.trim(registerUserRequest.getEmail()));
-			usr.setGender(StringUtils.trim(registerUserRequest.getGender()));
+			usr.setGender(StringUtils.upperCase(StringUtils.trim(registerUserRequest.getGender())));
 			usr.setDob(registerUserRequest.getDob());
 
 			registrationRepository.save(usr);
