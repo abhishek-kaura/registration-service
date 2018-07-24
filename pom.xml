@@ -80,7 +80,7 @@
 				<version>0.4.13</version>
 				<configuration>
 					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-					<baseImage>registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift</baseImage>
+					<baseImage>openjdk:8-jdk-alpine</baseImage>
 					<entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>
 					<resources>
 						<resource>
